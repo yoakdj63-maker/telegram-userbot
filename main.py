@@ -1,7 +1,7 @@
 from telethon import TelegramClient, events
+from telethon.sessions import StringSession
 import asyncio
 import os
-import json
 
 api_id = int(os.getenv("API_ID"))
 api_hash = os.getenv("API_HASH")
