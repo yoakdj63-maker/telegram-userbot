@@ -121,5 +121,7 @@ async def main():
     await client.run_until_disconnected()
 
 
-if __name__ == "__main__":
-    asyncio.run(main())
+client.start()
+print("Userbot is running...")
+client.loop.create_task(send_loop())
+client.run_until_disconnected()
