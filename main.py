@@ -175,4 +175,7 @@ async def main():
     await client.run_until_disconnected()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    with client:
+        print("Admin yetkili userbot çalışıyor.")
+        client.loop.create_task(auto_sender())
+        client.run_until_disconnected()
